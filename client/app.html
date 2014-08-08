@@ -1,0 +1,30 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>
+            brainz
+        </title>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body>
+        <input name="a" type="file" multiple onchange="filesChanged"/>
+        <input name="b" type="file" multiple/>
+        <button name="go" onclick="go()">Go</button>
+        <canvas width="250" height="250" id="canv"></canvas>
+
+        <script>
+            $(document).ready(function() {
+
+                $('input[name=a]').change(function() {
+                    filesChanged(this)
+                });
+
+                $('input[name=b]').change(function() {
+                    alert($(this).val());
+                });
+
+            });
+        </script>
+    </body>
+</html>
